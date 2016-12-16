@@ -1,0 +1,128 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+<HorizontalScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:background="@drawable/shape"
+            android:onClick="mapsType"
+            android:id="@+id/normaltype"
+            android:text="NormallType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:background="@drawable/shape"
+            android:onClick="mapsType"
+            android:id="@+id/satelitetype"
+            android:text="satelitetype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:background="@drawable/shape"
+            android:onClick="mapsType"
+            android:id="@+id/Marker"
+            android:text="marker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:background="@drawable/shape"
+            android:onClick="mapsType"
+            android:id="@+id/gps"
+            android:text="Gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+</HorizontalScrollView>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:orientation="horizontal"
+      android:layout_marginTop="10dp"
+      android:layout_height="wrap_content">
+      <EditText
+          android:hint="search"
+          android:id="@+id/search"
+          android:ems="10"
+          android:background="@drawable/shape"
+          android:onClick="searchPlaces"
+          android:layout_width="255dp"
+          android:layout_height="wrap_content" />
+      <Button
+          android:background="@drawable/shape"
+          android:text="search"
+          android:id="@+id/search1"
+          android:onClick="searchPlaces"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp" />
+
+  </LinearLayout>
+    </HorizontalScrollView>
+
+   <LinearLayout
+       android:layout_marginTop="5dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+
+       <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+           xmlns:map="http://schemas.android.com/apk/res-auto"
+           xmlns:tools="http://schemas.android.com/tools"
+           android:id="@+id/map"
+           android:name="com.google.android.gms.maps.SupportMapFragment"
+           android:layout_width="290dp"
+           android:layout_height="473dp"
+           tools:context="com.example.ravi.basicmaps.MapsActivity" />
+
+
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+
+           <Button
+               android:onClick="zoomCamera"
+               android:layout_marginTop="175dp"
+               android:text="^"
+               android:background="@drawable/shape"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/zoomin" />
+
+           <Button
+               android:text="v"
+               android:background="@drawable/shape"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/zoomin"
+               android:id="@+id/zoomout" />
+
+
+       </RelativeLayout>
+
+   </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
